@@ -65,6 +65,24 @@ npm run package:win
 
 Packaged output is generated in the `release/` folder.
 
+## GitHub Actions
+
+This repository includes a GitHub Actions workflow at `.github/workflows/build-desktop.yml`.
+
+It will:
+
+- build a macOS `.dmg` on pushes to `main`
+- build a Windows `.exe` installer on pushes to `main`
+- upload both as workflow artifacts
+- create a GitHub Release automatically when you push a version tag like `v1.0.0`
+
+Example release tag:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
 ## Project Structure
 
 ```text
